@@ -20,7 +20,7 @@ public class StatsTask  extends AsyncTask<String, Integer, Integer> {
     protected Integer doInBackground(String... inputs) {
         PyObject batteryStats = connection.callAttr("get_battery_state");
         String vector = batteryStats.get("battery_level").toString();
-        String cube = batteryStats.get("cube_battery.level").toString();
+        String cube = batteryStats.get("cube_battery").get("level").toString();
         home.updateStats(vector,cube);
         return 1;
     }
