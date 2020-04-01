@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Vector Remote</string>
+    <string name="tab_text_0">Home</string>
+    <string name="tab_text_1">Controller</string>
+    <string name="tab_text_2">Utilities</string>
+
+    <string name="no_value">n.a.</string>
+
+    <string name="home_status">Status</string>
+    <string name="home_status_connect">Connect</string>
+    <string name="home_status_disconnect">Disconnect</string>
+    <string name="home_status_c">connected</string>
+    <string name="home_status_d">disconnected</string>
+    <string name="home_status_error">Error connecting to vector! Please check IP, name and serial and try again.</string>
+    <string name="home_credentials">Credentials</string>
+    <string name="home_cert_status">Cert. Status:</string>
+    <string name="home_cert_missing">missing</string>
+    <string name="home_cert_found">stored</string>
+    <string name="home_cert_delete">delete cert</string>
+    <string name="home_cert_request">request cert</string>
+    <string name="home_cert_error">Error downloading cert! Please check credentials and try again.</string>
+    <string name="home_credentials_name">Vector\'s Name</string>
+    <string name="home_credentials_serial">Vector\'s Serial</string>
+    <string name="home_credentials_ip">Vector\'s IP</string>
+    <string name="home_credentials_email">Anki Email</string>
+    <string name="home_credentials_password">Anki Password</string>
+    <string name="home_battery">Vector Battery</string>
+    <string name="home_cube">Cube Battery</string>
+    <string name="home_stats">Stats</string>
+    <string name="home_save">Save</string>
+
+
+    <string name="utils_buttons_say">Say</string>
+    <string name="utils_heads_charger">Charger</string>
+    <string name="utils_heads_say">Say Text</string>
+    <string name="utils_buttons_charger_on">Drive On</string>
+    <string name="utils_buttons_charger_off">Drive Off</string>
+
+</resources>
