@@ -3,7 +3,6 @@ package de.reckendrees.systems.vectorremote.ui.main;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.media.tv.TvContract;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -236,10 +235,10 @@ public class HomeFragment extends Fragment implements HomeInterface {
 
         switch(cube){
             case "1":
-                vectorBar.setProgress(50);
+                cubeBar.setProgress(50);
                 break;
             case "2":
-                vectorBar.setProgress(100);
+                cubeBar.setProgress(100);
                 break;
 
         }
