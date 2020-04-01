@@ -147,7 +147,7 @@ public class HomeFragment extends Fragment implements HomeInterface {
             }
         });
         connectButton.setEnabled(false);
-        if(checkCert() && sharedPref.getBoolean("connected",false)){
+        if(checkCert() && sharedPref.getBoolean("connected",false) && !checkConnectionStatus()){
             connect(true);
         }
         return root;
@@ -243,15 +243,25 @@ public class HomeFragment extends Fragment implements HomeInterface {
 
         }
     }
+    private boolean checkConnectionStatus(){
+        if(robotStore.isConnected()){
+            statusText.setText(getResources().getString(R.string.home_status_c));
+            statusText.setTextColor(getResources().getColor(R.color.colorGreen));
+            connectButton.setText(getResources().getString(R.string.home_status_disconnect));
+            return true;
+        }else{
+            statusText.setText(getResources().getString(R.string.home_status_d));
+            statusText.setTextColor(getResources().getColor(R.color.colorRed));
+            connectButton.setText(getResources().getString(R.string.home_status_connect));
+            return false;
+        }
+    }
     public void updateConnectionStatus(Integer status, PyObject connection){
         if (dialog != null && dialog.isShowing()) {
             dialog.dismiss();
         }
         isConnecting = false;
         if(status == 1){
-            statusText.setText(getResources().getString(R.string.home_status_c));
-            statusText.setTextColor(getResources().getColor(R.color.colorGreen));
-            connectButton.setText(getResources().getString(R.string.home_status_disconnect));
             this.robotStore.setRobot(connection);
             editor.putBoolean("connected", true);
             editor.commit();
@@ -262,6 +272,7 @@ public class HomeFragment extends Fragment implements HomeInterface {
             Snackbar.make(root, getResources().getString(R.string.home_status_error), Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
         }
+        checkConnectionStatus();
 
 
     }

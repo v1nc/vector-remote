@@ -1,7 +1,6 @@
 package de.reckendrees.systems.vectorremote.api;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.chaquo.python.PyObject;
 
