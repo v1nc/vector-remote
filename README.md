@@ -2,7 +2,10 @@
 
 control anki vector with your android device
 
-<img src="https://github.com/v1nc/vector-remote/raw/master/1585818534690.png"  width="400" />
+<img src="https://github.com/v1nc/vector-remote/raw/master/1585818534690.png" data-canonical-src="https://github.com/v1nc/vector-remote/raw/master/1585818534690.png" width="200" />
+
+
+
 
 
 
